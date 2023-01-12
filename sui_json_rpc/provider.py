@@ -5,7 +5,7 @@ from sui_json_rpc.methods import sui_rpc_method_builder
 
 
 class SuiJsonRPCProvider:
-    """A provider for the Sui RPC JSON API."""
+    """A provider for the Sui JSON RPC API."""
 
     method_builder = sui_rpc_method_builder
 
@@ -13,7 +13,7 @@ class SuiJsonRPCProvider:
         self.rpc_url = rpc_url or config.RPC_URL
 
     def request(self, payload: dict) -> dict:
-        """Send a request to the Sui RPC JSON API.
+        """Request to the Sui RPC JSON API.
 
         :param payload: The payload to send.
         :return: The response from the Sui RPC JSON API.
@@ -23,8 +23,7 @@ class SuiJsonRPCProvider:
         return response.json()
 
     def send(self, method: str, params: dict) -> dict:
-        """Send a request to the Sui RPC JSON API.
-
+        """
         :param method: The method to call.
         :param params: The parameters to pass to the method.
         :return: The response from the Sui RPC JSON API.
